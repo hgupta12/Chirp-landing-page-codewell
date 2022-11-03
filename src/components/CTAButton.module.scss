@@ -1,0 +1,34 @@
+@use '../partials/variables' as *;
+@use '../partials/mixins' as *;
+@use '../partials/breakpoints' as *;
+.btn{
+    background-color: $color-twitter;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 12rem;
+    padding: 0.75rem;
+    @include flex(row,center,center);  
+    cursor: pointer;
+    transition: all 0.2s;
+    svg{
+        margin-right: 0.5rem;
+    }
+    span{
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+    &:hover{
+            transition: all 0.2s;
+        background-color:mix(white,$color-twitter,15%);
+    }
+    &.full-small{
+        @include breakpoint-down(small){
+            width: 100%;
+        }
+    }
+    &.full{
+        width: 100%;
+
+    }
+}

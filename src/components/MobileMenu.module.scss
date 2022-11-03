@@ -1,0 +1,48 @@
+@use '../partials/mixins' as *;
+@use '../partials/breakpoints' as *;
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+     @include breakpoint-up(small){
+        display: none;
+    }
+}
+.mobile-menu{
+    position: absolute; 
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    padding: 1rem 0.5rem;
+    z-index: 3;
+    @include breakpoint-up(small){
+        display: none;
+    }
+    ul{
+        margin-bottom: 1rem;
+    }
+    li{
+        padding: 0.3rem 0;
+       @include flex(column,center,center);
+        a{
+            color: black;
+            font-size: 1.125rem;
+            padding: 0.2rem;
+        }
+        &:hover{
+            background-color: beige;
+            cursor: pointer;
+        }
+    }
+    .line{
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        margin-bottom: 1rem;
+
+    }
+}

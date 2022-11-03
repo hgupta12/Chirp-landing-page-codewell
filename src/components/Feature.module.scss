@@ -1,0 +1,21 @@
+@use '../partials/variables' as *;
+@use '../partials/breakpoints' as *;
+.feature{
+    border: 1px solid #ccc;
+    padding: 1rem;
+    span{
+        font-size: 2rem;
+        display: inline-block;
+        margin-bottom: 0.75rem;
+    }
+    .title{
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+    }
+    p{
+        @include breakpoint-down(small){
+            word-spacing: 1px;
+        }
+    }
+}

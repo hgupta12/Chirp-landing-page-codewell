@@ -1,0 +1,9 @@
+.users{
+    margin: {
+        top:1.5rem;
+        bottom: 1rem;
+    };
+    svg:not(:first-child){
+        margin-left: -1.25rem;
+    }
+}

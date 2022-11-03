@@ -1,0 +1,21 @@
+@use '../partials/breakpoints' as *;
+@use '../partials/mixins' as *;
+@use '../partials/variables' as *;
+
+.reviews{
+    background-color: $color-blue-bg;
+    padding: 3rem 0;
+    .container{
+        @include container;
+        .grid{
+            display: grid;
+            justify-content: center;
+            align-items: start;
+            gap: 1.25rem;
+            grid-template-columns: 1fr;
+            @include breakpoint-up(medium){
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
+}

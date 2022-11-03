@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './base.scss';
+import Features from './components/Features';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Plan from './components/Plan';
+import Reviews from './components/Reviews';
 
 function App() {
+     const [showMenu, setShowMenu] = useState(false);
+     const mobileMenuHandler = () => {
+       setShowMenu((prev) => !prev);
+       document.body.classList.toggle('showMenu');
+     };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header showMenu={showMenu} toggleMenu={mobileMenuHandler}/>
+    <Hero/>
+    <Features/>
+    <Reviews/>
+    <Plan/>
+    <Footer/>
+    </>
   );
 }
 

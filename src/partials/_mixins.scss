@@ -1,0 +1,12 @@
+@mixin container($width:1100px){
+    width: $width;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@mixin flex($direction:row,$jc:space-between ,$ai:center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $jc;
+    align-items: $ai;
+}

@@ -1,0 +1,7 @@
+@use '../partials/variables' as *;
+.logo{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:$color-logo;
+    font-style: italic;
+}

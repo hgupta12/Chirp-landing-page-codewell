@@ -1,0 +1,28 @@
+@use '../partials/mixins' as *;
+@use '../partials/variables' as *;
+@use '../partials/breakpoints' as *;
+
+.footer{
+    background-color: $color-blue-bg;
+    padding: 1rem 0;
+    .container{
+        @include container;
+        @include flex;
+        @include breakpoint-down(small){
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+    }
+    .links{
+        @include flex;
+        li:not(:last-child){
+            margin-right: 0.75rem;
+        }
+        a{
+            color: black;
+            font-size: 0.9375rem;
+        }
+    }
+
+}

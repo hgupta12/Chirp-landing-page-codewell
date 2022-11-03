@@ -1,0 +1,24 @@
+@use '../partials/breakpoints' as *;
+@use '../partials/mixins' as *;
+@use '../partials/variables' as *;
+
+.features{
+    margin: 4rem 0;
+    &-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        @include breakpoint-up(medium){
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+.container{
+    @include container;
+   h2{
+       @include breakpoint-up(small){
+           width: 500px;
+       }
+   }
+}
